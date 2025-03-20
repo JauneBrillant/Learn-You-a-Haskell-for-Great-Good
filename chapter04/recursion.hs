@@ -32,6 +32,15 @@ elem' tar (x : xs)
   | tar == x = True
   | otherwise = tar `elem'` xs
 
+map' :: (a -> b) -> [a] -> [b]
+map' f [] = []
+map' f (x : xs) = f x : map' f xs
+
+-- 高階関数の例: map関数
+map :: (a -> b) -> [a] -> [b]
+map f [] = []
+map f (x : xs) = f x : map f xs
+
 quicksort :: (Ord a) => [a] -> [a]
 quicksort [] = []
 quicksort (x : xs) =
