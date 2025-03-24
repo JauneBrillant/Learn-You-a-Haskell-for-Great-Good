@@ -48,10 +48,3 @@ mysteryDude =
 
 data Day = Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday
   deriving (Eq, Ord, Show, Read, Bounded, Enum)
-
-phoneBook :: [(String, String)]
-phoneBook =
-  [ ("satou", "111-1111"),
-    ("takeshi", "222-2222"),
-    ("shinji", "333-3333")
-  ]

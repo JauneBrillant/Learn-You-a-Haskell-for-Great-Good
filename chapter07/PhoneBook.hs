@@ -18,5 +18,3 @@ type AssocList k v = [(k, v)]
 
 findItem :: (Eq k, Eq v) => k -> v -> AssocList k v -> Maybe (k, v)
 findItem key value list = if (key, value) `elem` list then Just (key, value) else Nothing
-
-data Either a b = Left a | Right b deriving (Eq, Ord, Read, Show)
